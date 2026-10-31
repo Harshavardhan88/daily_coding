@@ -1,17 +1,21 @@
-# selection sort - find the smallest element and put it in place, one by one
+# selection sort: find the smallest element left and put it in place
 
-def selection_sort(nums):
-    n = len(nums)
+def selection_sort(arr):
+    n = len(arr)
     for i in range(n):
         smallest = i
         for j in range(i + 1, n):
-            if nums[j] < nums[smallest]:
+            if arr[j] < arr[smallest]:
                 smallest = j
-        nums[i], nums[smallest] = nums[smallest], nums[i]
-    return nums
+        arr[i], arr[smallest] = arr[smallest], arr[i]
+    return arr
 
 
-print(selection_sort([64, 25, 12, 22, 11]))
-print(selection_sort([5, 4, 3, 2, 1]))
-print(selection_sort([3, 1, 4, 1, 5, 9, 2]))
-print(selection_sort([]))
+nums = [64, 25, 12, 22, 11]
+print(selection_sort(nums))
+
+nums2 = [5, 4, 3, 2, 1]
+print(selection_sort(nums2))
+
+nums3 = [3, 1, 4, 1, 5, 9]
+print(selection_sort(nums3))
