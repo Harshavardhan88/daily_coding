@@ -1,4 +1,5 @@
-# selection sort: find the smallest element left and put it in place
+# selection sort - keep picking the smallest remaining element
+# and move it to the front
 
 def selection_sort(arr):
     n = len(arr)
@@ -14,8 +15,6 @@ def selection_sort(arr):
 nums = [64, 25, 12, 22, 11]
 print(selection_sort(nums))
 
-nums2 = [5, 4, 3, 2, 1]
-print(selection_sort(nums2))
-
-nums3 = [3, 1, 4, 1, 5, 9]
-print(selection_sort(nums3))
+print(selection_sort([5, 4, 3, 2, 1]))
+print(selection_sort([1, 2, 3]))
+print(selection_sort([]))
